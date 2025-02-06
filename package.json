@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:todo-app": "node dist/todo-app/server/server.mjs"
+    "serve:ssr:todo-app": "node dist/todo-app/server/server.mjs",
+    "deploy": "ng build --base-href=/todo-app/"
   },
   "private": true,
   "dependencies": {
