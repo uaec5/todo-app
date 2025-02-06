@@ -27,6 +27,7 @@ import { DigitalClockComponent } from './shared/components/digital-clock/digital
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'todo-app';
   todos: { text: string; completed: boolean }[] = [];
   newTodo = '';
 

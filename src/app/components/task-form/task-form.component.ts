@@ -121,7 +121,7 @@ export class TaskFormComponent implements OnDestroy {
     
     console.log('Requesting AI suggestions...');
     this.chatgptService.getSuggestions('اقترح ثلاث مهام يومية مفيدة').subscribe({
-      next: (suggestions) => {
+      next: (suggestions: string[]) => {
         console.log('Received suggestions:', suggestions);
         this.suggestions = suggestions;
         this.isLoading = false;
@@ -131,10 +131,11 @@ export class TaskFormComponent implements OnDestroy {
           this.startCooldown();
         }
       },
-      error: (error) => {
+      error: (error: Error) => {
         console.error('Error getting suggestions:', error);
-        this.error = 'حدث خطأ أثناء الحصول على الاقتراحات';
+        this.error = error.message;
         this.isLoading = false;
+        this.startCooldown();
       }
     });
   }
