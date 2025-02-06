@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
 import { TaskItemComponent } from '../task-item/task-item.component';
-import { ChatgptService } from '../../services/chatgpt.service';
+import { ChatgptService } from '@services/chatgpt.service';
 import { DigitalClockComponent } from '../digital-clock/digital-clock.component';
 import { Task } from '../../models/task.model';
 

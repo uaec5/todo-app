@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
-import { ChatgptService } from '../../services/chatgpt.service';
+import { ChatgptService } from '@services/chatgpt.service';
 
 @Component({
   selector: 'app-task-form',
